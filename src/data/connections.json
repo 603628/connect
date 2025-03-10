@@ -1,0 +1,84 @@
+{
+  "connections": [
+    {
+      "name": "Mike Rodriguez",
+      "role": "Master Mechanic",
+      "imageUrl": "https://i.pravatar.cc/150?img=1",
+      "connectionStrength": 9,
+      "lastInteractionAt": "2024-03-19T09:45:00Z",
+      "categoryId": "automotive",
+      "subcategoryId": "mechanics",
+      "expertise": "European car specialist, 15 years experience with BMW and Mercedes"
+    },
+    {
+      "name": "Sarah Chen",
+      "role": "Immigration Attorney",
+      "imageUrl": "https://i.pravatar.cc/150?img=2",
+      "connectionStrength": 8,
+      "lastInteractionAt": "2024-03-18T15:30:00Z",
+      "categoryId": "legal",
+      "subcategoryId": "immigrationLaw",
+      "expertise": "Specializing in work visas and permanent residency applications"
+    },
+    {
+      "name": "Elena Popov",
+      "role": "Real Estate Agent",
+      "imageUrl": "https://i.pravatar.cc/150?img=3",
+      "connectionStrength": 7,
+      "lastInteractionAt": "2024-03-12T09:20:00Z",
+      "categoryId": "housing",
+      "subcategoryId": "realEstateAgents",
+      "expertise": "Luxury properties and investment opportunities specialist"
+    },
+    {
+      "name": "Dr. James Wilson",
+      "role": "Family Physician",
+      "imageUrl": "https://i.pravatar.cc/150?img=4",
+      "connectionStrength": 9,
+      "lastInteractionAt": "2024-02-19T11:15:00Z",
+      "categoryId": "healthcare",
+      "subcategoryId": "primaryCare",
+      "expertise": "Preventive care and chronic disease management"
+    },
+    {
+      "name": "Maria Gonzalez",
+      "role": "Chef & Restaurant Owner",
+      "imageUrl": "https://i.pravatar.cc/150?img=5",
+      "connectionStrength": 8,
+      "lastInteractionAt": "2023-11-20T08:00:00Z",
+      "categoryId": "foodAndDining",
+      "subcategoryId": "restaurants",
+      "expertise": "Award-winning Mediterranean cuisine, catering services"
+    },
+    {
+      "name": "David Park",
+      "role": "Financial Advisor",
+      "imageUrl": "https://i.pravatar.cc/150?img=6",
+      "connectionStrength": 7,
+      "lastInteractionAt": "2023-09-15T14:30:00Z",
+      "categoryId": "financial",
+      "subcategoryId": "financialPlanning",
+      "expertise": "Retirement planning and wealth management"
+    },
+    {
+      "name": "Lisa Thompson",
+      "role": "Auto Body Specialist",
+      "imageUrl": "https://i.pravatar.cc/150?img=7",
+      "connectionStrength": 6,
+      "lastInteractionAt": "2023-03-19T16:45:00Z",
+      "categoryId": "automotive",
+      "subcategoryId": "autoBodyRepair",
+      "expertise": "Custom paint jobs and collision repair"
+    },
+    {
+      "name": "Ahmed Hassan",
+      "role": "Tax Attorney",
+      "imageUrl": "https://i.pravatar.cc/150?img=8",
+      "connectionStrength": 8,
+      "lastInteractionAt": "2022-03-19T13:20:00Z",
+      "categoryId": "legal",
+      "subcategoryId": "taxAdvisory",
+      "expertise": "International tax law and business taxation"
+    }
+  ]
+} 

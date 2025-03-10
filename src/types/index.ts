@@ -1,32 +1,74 @@
 export interface CategoryStructure {
+  id: string;
   name: string;
-  subcategories: string[];
+  subcategories: Array<{
+    id: string;
+    name: string;
+  }>;
 }
 
 export const CATEGORIES: CategoryStructure[] = [
   {
+    id: 'automotive',
     name: 'Automotive',
-    subcategories: ['Mechanics', 'Car Sales', 'Car Buying Consultation', 'Auto Body Repair']
+    subcategories: [
+      { id: 'mechanics', name: 'Mechanics' },
+      { id: 'carSales', name: 'Car Sales' },
+      { id: 'carBuyingConsultation', name: 'Car Buying Consultation' },
+      { id: 'autoBodyRepair', name: 'Auto Body Repair' }
+    ]
   },
   {
+    id: 'legal',
     name: 'Legal',
-    subcategories: ['Tax Advisory', 'Family Law', 'Real Estate Law', 'Business Law', 'Immigration Law']
+    subcategories: [
+      { id: 'taxAdvisory', name: 'Tax Advisory' },
+      { id: 'familyLaw', name: 'Family Law' },
+      { id: 'realEstateLaw', name: 'Real Estate Law' },
+      { id: 'businessLaw', name: 'Business Law' },
+      { id: 'immigrationLaw', name: 'Immigration Law' }
+    ]
   },
   {
+    id: 'housing',
     name: 'Housing',
-    subcategories: ['Real Estate Agents', 'Property Management', 'Home Inspection', 'Interior Design']
+    subcategories: [
+      { id: 'realEstateAgents', name: 'Real Estate Agents' },
+      { id: 'propertyManagement', name: 'Property Management' },
+      { id: 'homeInspection', name: 'Home Inspection' },
+      { id: 'interiorDesign', name: 'Interior Design' }
+    ]
   },
   {
+    id: 'healthcare',
     name: 'Healthcare',
-    subcategories: ['Primary Care', 'Pediatrics', 'Dentistry', 'Physical Therapy', 'Mental Health']
+    subcategories: [
+      { id: 'primaryCare', name: 'Primary Care' },
+      { id: 'pediatrics', name: 'Pediatrics' },
+      { id: 'dentistry', name: 'Dentistry' },
+      { id: 'physicalTherapy', name: 'Physical Therapy' },
+      { id: 'mentalHealth', name: 'Mental Health' }
+    ]
   },
   {
+    id: 'foodAndDining',
     name: 'Food & Dining',
-    subcategories: ['Restaurants', 'Personal Chefs', 'Catering', 'Nutrition']
+    subcategories: [
+      { id: 'restaurants', name: 'Restaurants' },
+      { id: 'personalChefs', name: 'Personal Chefs' },
+      { id: 'catering', name: 'Catering' },
+      { id: 'nutrition', name: 'Nutrition' }
+    ]
   },
   {
+    id: 'financial',
     name: 'Financial',
-    subcategories: ['Tax Advisory', 'Financial Planning', 'Accounting', 'Investment']
+    subcategories: [
+      { id: 'taxAdvisory', name: 'Tax Advisory' },
+      { id: 'financialPlanning', name: 'Financial Planning' },
+      { id: 'accounting', name: 'Accounting' },
+      { id: 'investment', name: 'Investment' }
+    ]
   }
 ];
 
@@ -35,9 +77,9 @@ export interface Connection {
   role: string;
   imageUrl: string;
   connectionStrength: number; // 1-10 rating of how reliable/responsive the contact is
-  lastInteraction: string;
-  category: string;
-  subcategory: string;
+  lastInteractionAt: string; // ISO 8601 timestamp
+  categoryId: string;
+  subcategoryId: string;
   expertise: string; // Brief description of their specific expertise
 }
 

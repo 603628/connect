@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin', 'cyrillic'] })
 
 export const metadata: Metadata = {
-  title: 'Connect App',
-  description: 'A modern social connection platform',
+  title: 'Connect',
+  description: 'Your trusted network of service providers',
 }
 
 export default function RootLayout({
@@ -15,14 +15,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body 
-        className={`${inter.className} bg-gray-100 min-h-screen`}
-        suppressHydrationWarning={true}
-      >
-        <main className="container mx-auto px-4 py-8">
-          {children}
-        </main>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className} suppressHydrationWarning>
+        {children}
       </body>
     </html>
   )
