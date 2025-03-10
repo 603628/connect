@@ -17,6 +17,15 @@
         "connectionStrength": "Рейтинг надійності"
       }
     },
+    "connection": {
+      "reliability": {
+        "label": "Рейтинг надійності",
+        "outOf": "{score}/10",
+        "high": "Дуже надійний",
+        "medium": "Надійний",
+        "low": "Новий зв'язок"
+      }
+    },
     "categories": {
       "title": "Категорії",
       "allServices": "Всі послуги",

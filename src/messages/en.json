@@ -17,6 +17,15 @@
         "connectionStrength": "Reliability Score"
       }
     },
+    "connection": {
+      "reliability": {
+        "label": "Reliability Score",
+        "outOf": "{score}/10",
+        "high": "Very Reliable",
+        "medium": "Reliable",
+        "low": "New Connection"
+      }
+    },
     "categories": {
       "title": "Categories",
       "allServices": "All Services",

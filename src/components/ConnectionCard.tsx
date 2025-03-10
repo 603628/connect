@@ -6,6 +6,7 @@ import { useCallback } from 'react';
 import { defaultLocale } from '@/i18n';
 import enMessages from '@/messages/en.json';
 import uaMessages from '@/messages/ua.json';
+import Image from 'next/image';
 
 const TRANSLATIONS = {
   en: enMessages,
@@ -85,7 +86,7 @@ export default function ConnectionCard({
   subcategoryId,
   expertise,
 }: ConnectionCardProps) {
-  const t = useCallback((key: string): string => {
+  const t = useCallback((key: string, params?: Record<string, any>): string => {
     try {
       const locale = localStorage.getItem('locale') || defaultLocale;
       const messages = TRANSLATIONS[locale as keyof typeof TRANSLATIONS] || TRANSLATIONS[defaultLocale];
@@ -95,7 +96,16 @@ export default function ConnectionCard({
       for (const k of keys) {
         value = value?.[k];
       }
-      return value || key;
+
+      if (!value) return key;
+      
+      if (params) {
+        return Object.entries(params).reduce((acc, [key, paramValue]) => {
+          return acc.replace(`{${key}}`, paramValue.toString());
+        }, value);
+      }
+      
+      return value;
     } catch (error) {
       console.error('Error in translation:', error);
       return key;
@@ -104,24 +114,32 @@ export default function ConnectionCard({
 
   const locale = typeof window !== 'undefined' ? localStorage.getItem('locale') || defaultLocale : defaultLocale;
 
+  const getReliabilityColor = (score: number) => {
+    if (score >= 7) return 'bg-green-500';
+    if (score >= 4) return 'bg-yellow-500';
+    return 'bg-red-500';
+  };
+
+  const getReliabilityLabel = (score: number) => {
+    if (score >= 7) return t('app.connection.reliability.high');
+    if (score >= 4) return t('app.connection.reliability.medium');
+    return t('app.connection.reliability.low');
+  };
+
   return (
     <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
       <div className="flex items-center space-x-4">
         <div className="relative w-16 h-16">
-          <img
+          <Image
             src={imageUrl}
             alt={`${name}'s profile`}
-            className="rounded-full object-cover w-full h-full"
-          />
-          <div 
-            className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 border-white
-              ${connectionStrength >= 7 ? 'bg-green-500' : 
-                connectionStrength >= 4 ? 'bg-yellow-500' : 'bg-red-500'
-              }`}
-            title={`Reliability Score: ${connectionStrength}/10`}
+            className="rounded-full object-cover"
+            fill
+            sizes="64px"
+            priority={false}
           />
         </div>
-        <div>
+        <div className="flex-1">
           <h3 className="font-semibold text-lg text-gray-900">{name}</h3>
           <p className="text-gray-600 text-sm">{role}</p>
           <div className="flex flex-wrap gap-2 mt-2">
@@ -136,6 +154,24 @@ export default function ConnectionCard({
       </div>
       
       <div className="mt-4 pt-4 border-t border-gray-100">
+        <div className="mb-3">
+          <div className="flex justify-between items-center mb-1">
+            <span className="text-sm font-medium text-gray-700">
+              {t('app.connection.reliability.label')}
+            </span>
+            <span className="text-sm text-gray-600">
+              {t('app.connection.reliability.outOf', { score: connectionStrength })}
+            </span>
+          </div>
+          <div className="relative w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div 
+              className={`absolute left-0 top-0 h-full rounded-full transition-all ${getReliabilityColor(connectionStrength)}`}
+              style={{ width: `${connectionStrength * 10}%` }}
+            />
+          </div>
+          <p className="text-sm mt-1 text-gray-600">{getReliabilityLabel(connectionStrength)}</p>
+        </div>
+
         <p className="text-sm text-gray-600 mb-2">
           {expertise}
         </p>
