@@ -8,12 +8,12 @@ const LANGUAGES = [
   {
     code: 'en',
     name: 'English',
-    flag: '/flags/ca.svg'  // Canadian flag
+    flag: process.env.NODE_ENV === 'production' ? '/connect/flags/ca.svg' : '/flags/ca.svg'
   },
   {
     code: 'ua',
     name: 'Українська',
-    flag: '/flags/ua.svg'  // Ukrainian flag
+    flag: process.env.NODE_ENV === 'production' ? '/connect/flags/ua.svg' : '/flags/ua.svg'
   }
 ];
 
