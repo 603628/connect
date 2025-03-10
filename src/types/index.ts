@@ -153,4 +153,20 @@ export interface Connection {
   expertise: string; // Brief description of their specific expertise
 }
 
-export interface ConnectionCardProps extends Connection {} 
+export interface ConnectionCardProps extends Connection {}
+
+export interface Location {
+  id: string;
+  name: string;
+  country: string;
+  isActive: boolean;
+}
+
+export const LOCATIONS: Location[] = [
+  {
+    id: 'manitoba',
+    name: 'Manitoba',
+    country: 'Canada',
+    isActive: true
+  }
+]; 

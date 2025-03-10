@@ -132,6 +132,13 @@
       "select": "Select language",
       "en": "English",
       "uk": "Ukrainian"
+    },
+    "location": {
+      "title": "Location",
+      "select": "Select location",
+      "list": {
+        "manitoba": "Manitoba, Canada"
+      }
     }
   }
 } 

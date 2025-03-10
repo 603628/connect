@@ -8,6 +8,7 @@ import { defaultLocale } from '@/i18n';
 import enMessages from '@/messages/en.json';
 import uaMessages from '@/messages/ua.json';
 import connectionsData from '@/data/connections.json';
+import LocationSelector from '@/components/LocationSelector';
 
 type SortDirection = 'asc' | 'desc';
 type SortField = 'name' | 'lastInteraction' | 'connectionStrength';
@@ -340,26 +341,31 @@ export default function Home() {
         </header>
 
         <div className="max-w-7xl mx-auto px-4">
-          {/* Search bar */}
+          {/* Search and Location bar */}
           <div className="py-6">
             <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder={t('app.search.placeholder')}
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full h-12 px-4 pr-10 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-                />
-                {searchQuery && (
-                  <button
-                    onClick={() => setSearchQuery('')}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 text-xl"
-                    aria-label={t('app.search.clear')}
-                  >
-                    ✕
-                  </button>
-                )}
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-1 relative">
+                  <input
+                    type="text"
+                    placeholder={t('app.search.placeholder')}
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full h-12 px-4 pr-10 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+                  />
+                  {searchQuery && (
+                    <button
+                      onClick={() => setSearchQuery('')}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 text-xl"
+                      aria-label={t('app.search.clear')}
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
+                <div className="flex-shrink-0">
+                  <LocationSelector />
+                </div>
               </div>
             </div>
           </div>
