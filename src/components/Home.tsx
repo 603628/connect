@@ -155,16 +155,35 @@ export default function Home() {
         if (!searchQuery) return true;
         const searchLower = searchQuery.toLowerCase();
         
-        // Get translated category and subcategory names
-        const categoryName = t(`app.categories.list.${connection.categoryId}`).toLowerCase();
-        const subcategoryName = t(`app.categories.subcategories.${connection.categoryId}.${connection.subcategoryId}`).toLowerCase();
+        // Get translated category and subcategory names in both languages
+        let categoryNameEn = '';
+        let categoryNameUa = '';
+        let subcategoryNameEn = '';
+        let subcategoryNameUa = '';
+
+        try {
+          categoryNameEn = TRANSLATIONS.en.app.categories.list[connection.categoryId as keyof typeof TRANSLATIONS.en.app.categories.list].toLowerCase();
+          categoryNameUa = TRANSLATIONS.ua.app.categories.list[connection.categoryId as keyof typeof TRANSLATIONS.ua.app.categories.list].toLowerCase();
+          
+          const categorySubcategoriesEn = TRANSLATIONS.en.app.categories.subcategories[connection.categoryId as keyof typeof TRANSLATIONS.en.app.categories.subcategories];
+          const categorySubcategoriesUa = TRANSLATIONS.ua.app.categories.subcategories[connection.categoryId as keyof typeof TRANSLATIONS.ua.app.categories.subcategories];
+          
+          if (categorySubcategoriesEn && categorySubcategoriesUa) {
+            subcategoryNameEn = (categorySubcategoriesEn[connection.subcategoryId as keyof typeof categorySubcategoriesEn] as string).toLowerCase();
+            subcategoryNameUa = (categorySubcategoriesUa[connection.subcategoryId as keyof typeof categorySubcategoriesUa] as string).toLowerCase();
+          }
+        } catch (error) {
+          console.error('Error accessing translations:', error);
+        }
         
         return (
           connection.name.toLowerCase().includes(searchLower) ||
           connection.role.toLowerCase().includes(searchLower) ||
           connection.expertise.toLowerCase().includes(searchLower) ||
-          categoryName.includes(searchLower) ||
-          subcategoryName.includes(searchLower)
+          categoryNameEn.includes(searchLower) ||
+          categoryNameUa.includes(searchLower) ||
+          subcategoryNameEn.includes(searchLower) ||
+          subcategoryNameUa.includes(searchLower)
         );
       })
       .filter(connection => {
