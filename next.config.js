@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/connect',
-  assetPrefix: '/connect/',
+  basePath: process.env.NODE_ENV === 'production' ? '/connect' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/connect/' : '',
   images: {
     remotePatterns: [
       {
