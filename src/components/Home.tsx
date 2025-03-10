@@ -151,10 +151,17 @@ export default function Home() {
       .filter(connection => {
         if (!searchQuery) return true;
         const searchLower = searchQuery.toLowerCase();
+        
+        // Get translated category and subcategory names
+        const categoryName = t(`app.categories.list.${connection.categoryId}`).toLowerCase();
+        const subcategoryName = t(`app.categories.subcategories.${connection.categoryId}.${connection.subcategoryId}`).toLowerCase();
+        
         return (
           connection.name.toLowerCase().includes(searchLower) ||
           connection.role.toLowerCase().includes(searchLower) ||
-          connection.expertise.toLowerCase().includes(searchLower)
+          connection.expertise.toLowerCase().includes(searchLower) ||
+          categoryName.includes(searchLower) ||
+          subcategoryName.includes(searchLower)
         );
       })
       .filter(connection => {
@@ -174,7 +181,7 @@ export default function Home() {
             return 0;
         }
       });
-  }, [searchQuery, selectedCategoryId, selectedSubcategoryId, sortBy, messages]);
+  }, [searchQuery, selectedCategoryId, selectedSubcategoryId, sortBy, messages, t]);
 
   const sortOptions = useMemo(() => [
     { value: 'name' as const, label: t('app.sort.options.name') },

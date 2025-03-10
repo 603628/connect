@@ -79,6 +79,86 @@
       "categoryId": "legal",
       "subcategoryId": "taxAdvisory",
       "expertise": "International tax law and business taxation"
+    },
+    {
+      "name": "Олена Ковальчук",
+      "role": "Перукар-стиліст",
+      "imageUrl": "https://i.pravatar.cc/150?img=9",
+      "connectionStrength": 9,
+      "lastInteractionAt": "2024-03-15T10:30:00Z",
+      "categoryId": "beauty",
+      "subcategoryId": "hairdressers",
+      "expertise": "Спеціалізується на весільних зачісках та колоруванні волосся"
+    },
+    {
+      "name": "Марія Петренко",
+      "role": "Кондитер",
+      "imageUrl": "https://i.pravatar.cc/150?img=10",
+      "connectionStrength": 10,
+      "lastInteractionAt": "2024-03-18T14:20:00Z",
+      "categoryId": "foodAndDining",
+      "subcategoryId": "bakeries",
+      "expertise": "Весільні торти та тематичні десерти, працює з веганськими рецептами"
+    },
+    {
+      "name": "Ігор Мельник",
+      "role": "Фотограф",
+      "imageUrl": "https://i.pravatar.cc/150?img=11",
+      "connectionStrength": 8,
+      "lastInteractionAt": "2024-03-10T09:15:00Z",
+      "categoryId": "events",
+      "subcategoryId": "photographers",
+      "expertise": "Весільна та сімейна фотографія, предметна зйомка для бізнесу"
+    },
+    {
+      "name": "Наталія Шевченко",
+      "role": "Дитячий аніматор",
+      "imageUrl": "https://i.pravatar.cc/150?img=12",
+      "connectionStrength": 9,
+      "lastInteractionAt": "2024-03-17T16:45:00Z",
+      "categoryId": "childcare",
+      "subcategoryId": "partyAnimators",
+      "expertise": "Організація дитячих свят, аквагрим, шоу мильних бульбашок"
+    },
+    {
+      "name": "Андрій Коваленко",
+      "role": "Майстер з ремонту",
+      "imageUrl": "https://i.pravatar.cc/150?img=13",
+      "connectionStrength": 7,
+      "lastInteractionAt": "2024-03-16T11:30:00Z",
+      "categoryId": "electronics",
+      "subcategoryId": "phoneRepair",
+      "expertise": "Ремонт iPhone та Android смартфонів, заміна екранів та батарей"
+    },
+    {
+      "name": "Оксана Лисенко",
+      "role": "Викладач англійської",
+      "imageUrl": "https://i.pravatar.cc/150?img=14",
+      "connectionStrength": 10,
+      "lastInteractionAt": "2024-03-19T13:00:00Z",
+      "categoryId": "education",
+      "subcategoryId": "languageCourses",
+      "expertise": "Підготовка до IELTS та TOEFL, розмовна англійська для бізнесу"
+    },
+    {
+      "name": "Василь Данилюк",
+      "role": "Інструктор з водіння",
+      "imageUrl": "https://i.pravatar.cc/150?img=15",
+      "connectionStrength": 8,
+      "lastInteractionAt": "2024-03-14T15:20:00Z",
+      "categoryId": "education",
+      "subcategoryId": "drivingSchools",
+      "expertise": "Навчання водінню з нуля, підготовка до іспиту в сервісному центрі МВС"
+    },
+    {
+      "name": "Людмила Романенко",
+      "role": "Косметолог",
+      "imageUrl": "https://i.pravatar.cc/150?img=16",
+      "connectionStrength": 9,
+      "lastInteractionAt": "2024-03-18T10:00:00Z",
+      "categoryId": "beauty",
+      "subcategoryId": "skinCare",
+      "expertise": "Професійний догляд за шкірою, чистка обличчя, anti-age процедури"
     }
   ]
 } 
