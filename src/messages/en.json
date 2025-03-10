@@ -1,0 +1,79 @@
+{
+  "app": {
+    "title": "Connect",
+    "subtitle": "Your trusted network of service providers",
+    "search": {
+      "placeholder": "Search by name, role, or expertise...",
+      "clear": "Clear search",
+      "results": {
+        "found": "{count, plural, =0 {No connections found} =1 {Found 1 connection} other {Found # connections}}"
+      }
+    },
+    "sort": {
+      "label": "Sort by",
+      "options": {
+        "name": "Name (A-Z)",
+        "lastInteraction": "Last Interaction",
+        "connectionStrength": "Reliability Score"
+      }
+    },
+    "categories": {
+      "title": "Categories",
+      "allServices": "All Services",
+      "all": "All {category}",
+      "list": {
+        "automotive": "Automotive",
+        "legal": "Legal",
+        "housing": "Housing",
+        "healthcare": "Healthcare",
+        "foodAndDining": "Food & Dining",
+        "financial": "Financial"
+      },
+      "subcategories": {
+        "automotive": {
+          "mechanics": "Mechanics",
+          "carSales": "Car Sales",
+          "carBuyingConsultation": "Car Buying Consultation",
+          "autoBodyRepair": "Auto Body Repair"
+        },
+        "legal": {
+          "taxAdvisory": "Tax Advisory",
+          "familyLaw": "Family Law",
+          "realEstateLaw": "Real Estate Law",
+          "businessLaw": "Business Law",
+          "immigrationLaw": "Immigration Law"
+        },
+        "housing": {
+          "realEstateAgents": "Real Estate Agents",
+          "propertyManagement": "Property Management",
+          "homeInspection": "Home Inspection",
+          "interiorDesign": "Interior Design"
+        },
+        "healthcare": {
+          "primaryCare": "Primary Care",
+          "pediatrics": "Pediatrics",
+          "dentistry": "Dentistry",
+          "physicalTherapy": "Physical Therapy",
+          "mentalHealth": "Mental Health"
+        },
+        "foodAndDining": {
+          "restaurants": "Restaurants",
+          "personalChefs": "Personal Chefs",
+          "catering": "Catering",
+          "nutrition": "Nutrition"
+        },
+        "financial": {
+          "taxAdvisory": "Tax Advisory",
+          "financialPlanning": "Financial Planning",
+          "accounting": "Accounting",
+          "investment": "Investment"
+        }
+      }
+    },
+    "language": {
+      "select": "Select language",
+      "en": "English",
+      "uk": "Ukrainian"
+    }
+  }
+} 

@@ -4,7 +4,7 @@ const nextConfig = {
   basePath: process.env.NODE_ENV === 'production' ? '/connect' : '',
   images: {
     unoptimized: true,
-  },
+  }
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -1,0 +1,79 @@
+{
+  "app": {
+    "title": "Connect",
+    "subtitle": "Ваша надійна мережа постачальників послуг",
+    "search": {
+      "placeholder": "Пошук за іменем, роллю чи спеціалізацією...",
+      "clear": "Очистити пошук",
+      "results": {
+        "found": "{count, plural, =0 {Зв'язків не знайдено} one {Знайдено 1 зв'язок} few {Знайдено # зв'язки} other {Знайдено # зв'язків}}"
+      }
+    },
+    "sort": {
+      "label": "Сортувати за",
+      "options": {
+        "name": "Ім'я (А-Я)",
+        "lastInteraction": "Остання взаємодія",
+        "connectionStrength": "Рейтинг надійності"
+      }
+    },
+    "categories": {
+      "title": "Категорії",
+      "allServices": "Всі послуги",
+      "all": "Всі {category}",
+      "list": {
+        "automotive": "Автомобільні",
+        "legal": "Юридичні",
+        "housing": "Житлові",
+        "healthcare": "Охорона здоров'я",
+        "foodAndDining": "Їжа та харчування",
+        "financial": "Фінансові"
+      },
+      "subcategories": {
+        "automotive": {
+          "mechanics": "Механіки",
+          "carSales": "Продаж авто",
+          "carBuyingConsultation": "Консультації з купівлі авто",
+          "autoBodyRepair": "Кузовний ремонт"
+        },
+        "legal": {
+          "taxAdvisory": "Податкові консультації",
+          "familyLaw": "Сімейне право",
+          "realEstateLaw": "Нерухомість",
+          "businessLaw": "Корпоративне право",
+          "immigrationLaw": "Імміграційне право"
+        },
+        "housing": {
+          "realEstateAgents": "Ріелтори",
+          "propertyManagement": "Управління нерухомістю",
+          "homeInspection": "Інспекція будинків",
+          "interiorDesign": "Дизайн інтер'єру"
+        },
+        "healthcare": {
+          "primaryCare": "Первинна допомога",
+          "pediatrics": "Педіатрія",
+          "dentistry": "Стоматологія",
+          "physicalTherapy": "Фізіотерапія",
+          "mentalHealth": "Психічне здоров'я"
+        },
+        "foodAndDining": {
+          "restaurants": "Ресторани",
+          "personalChefs": "Персональні кухарі",
+          "catering": "Кейтеринг",
+          "nutrition": "Харчування"
+        },
+        "financial": {
+          "taxAdvisory": "Податкові консультації",
+          "financialPlanning": "Фінансове планування",
+          "accounting": "Бухгалтерія",
+          "investment": "Інвестиції"
+        }
+      }
+    },
+    "language": {
+      "select": "Оберіть мову",
+      "en": "Англійська",
+      "uk": "Українська"
+    }
+  }
+} 
