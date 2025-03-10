@@ -139,6 +139,23 @@
       "list": {
         "manitoba": "Manitoba, Canada"
       }
+    },
+    "service": {
+      "notFound": "Service not found",
+      "comingSoon": "Coming Soon",
+      "comingSoonMessage": "We're working on adding more features to make this service page even better. Stay tuned!",
+      "reviews": {
+        "title": "Reviews"
+      },
+      "addReview": {
+        "title": "Add Your Review"
+      },
+      "gallery": {
+        "title": "Photo Gallery"
+      }
+    },
+    "navigation": {
+      "back": "Back to services"
     }
   }
 } 

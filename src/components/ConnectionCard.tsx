@@ -1,12 +1,12 @@
 'use client';
 
 import { ConnectionCardProps, CATEGORIES } from '@/types';
-import React from 'react';
-import { useCallback } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import { defaultLocale } from '@/i18n';
 import enMessages from '@/messages/en.json';
 import uaMessages from '@/messages/ua.json';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const TRANSLATIONS = {
   en: enMessages,
@@ -86,10 +86,26 @@ export default function ConnectionCard({
   subcategoryId,
   expertise,
 }: ConnectionCardProps) {
+  const router = useRouter();
+  const [currentLocale, setCurrentLocale] = useState(defaultLocale);
+  
+  useEffect(() => {
+    const storedLocale = localStorage.getItem('locale') || defaultLocale;
+    setCurrentLocale(storedLocale);
+
+    // Listen for locale changes
+    const handleStorageChange = () => {
+      const newLocale = localStorage.getItem('locale') || defaultLocale;
+      setCurrentLocale(newLocale);
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
+  }, []);
+
   const t = useCallback((key: string, params?: Record<string, any>): string => {
     try {
-      const locale = localStorage.getItem('locale') || defaultLocale;
-      const messages = TRANSLATIONS[locale as keyof typeof TRANSLATIONS] || TRANSLATIONS[defaultLocale];
+      const messages = TRANSLATIONS[currentLocale as keyof typeof TRANSLATIONS] || TRANSLATIONS[defaultLocale];
       
       const keys = key.split('.');
       let value: any = messages;
@@ -110,9 +126,10 @@ export default function ConnectionCard({
       console.error('Error in translation:', error);
       return key;
     }
-  }, []);
+  }, [currentLocale]);
 
-  const locale = typeof window !== 'undefined' ? localStorage.getItem('locale') || defaultLocale : defaultLocale;
+  // Create URL-friendly slug from name
+  const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
   const getReliabilityColor = (score: number) => {
     if (score >= 7) return 'bg-green-500';
@@ -127,7 +144,10 @@ export default function ConnectionCard({
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+    <div 
+      onClick={() => router.push(`/service/${slug}`)}
+      className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow duration-200 cursor-pointer"
+    >
       <div className="flex items-center space-x-4">
         <div className="relative flex-shrink-0 w-16 h-16">
           <Image
@@ -177,8 +197,8 @@ export default function ConnectionCard({
           {expertise}
         </p>
         <p className="text-sm text-gray-500">
-          {locale === 'ua' ? 'Остання взаємодія: ' : 'Last interaction: '}
-          {formatRelativeTime(lastInteractionAt, locale)}
+          {currentLocale === 'ua' ? 'Остання взаємодія: ' : 'Last interaction: '}
+          {formatRelativeTime(lastInteractionAt, currentLocale)}
         </p>
       </div>
     </div>
