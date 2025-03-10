@@ -9,6 +9,8 @@ import enMessages from '@/messages/en.json';
 import uaMessages from '@/messages/ua.json';
 import connectionsData from '@/data/connections.json';
 
+type SortDirection = 'asc' | 'desc';
+type SortField = 'name' | 'lastInteraction' | 'connectionStrength';
 type SortOption = 'name' | 'lastInteraction' | 'connectionStrength';
 
 const sampleConnections: Connection[] = connectionsData.connections;

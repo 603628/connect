@@ -29,7 +29,7 @@
     "categories": {
       "title": "Категорії",
       "allServices": "Всі послуги",
-      "all": "Всі {category}",
+      "all": "Всі",
       "list": {
         "automotive": "Автомобільні послуги",
         "beauty": "Краса та догляд",
@@ -109,7 +109,6 @@
           "interiorDesign": "Дизайн інтер'єру"
         },
         "legal": {
-          "taxAdvisory": "Податкові консультації",
           "familyLaw": "Сімейне право",
           "realEstateLaw": "Право нерухомості",
           "businessLaw": "Господарське право",

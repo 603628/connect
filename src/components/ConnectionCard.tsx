@@ -129,14 +129,15 @@ export default function ConnectionCard({
   return (
     <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
       <div className="flex items-center space-x-4">
-        <div className="relative w-16 h-16">
+        <div className="relative flex-shrink-0 w-16 h-16">
           <Image
             src={imageUrl}
             alt={`${name}'s profile`}
             className="rounded-full object-cover"
             fill
-            sizes="64px"
+            sizes="(max-width: 64px) 100vw, 64px"
             priority={false}
+            style={{ objectFit: 'cover' }}
           />
         </div>
         <div className="flex-1">

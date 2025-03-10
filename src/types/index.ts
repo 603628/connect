@@ -114,7 +114,6 @@ export const CATEGORIES: CategoryStructure[] = [
     id: 'legal',
     name: 'Legal',
     subcategories: [
-      { id: 'taxAdvisory', name: 'Tax Advisory' },
       { id: 'familyLaw', name: 'Family Law' },
       { id: 'realEstateLaw', name: 'Real Estate Law' },
       { id: 'businessLaw', name: 'Business Law' },

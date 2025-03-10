@@ -29,7 +29,7 @@
     "categories": {
       "title": "Categories",
       "allServices": "All Services",
-      "all": "All {category}",
+      "all": "All",
       "list": {
         "automotive": "Automotive",
         "beauty": "Beauty",
@@ -80,7 +80,8 @@
         "events": {
           "photographers": "Photographers",
           "videographers": "Videographers",
-          "eventPlanners": "Event Planners"
+          "eventPlanners": "Event Planners",
+          "catering": "Catering"
         },
         "financial": {
           "taxAdvisory": "Tax Advisory",
