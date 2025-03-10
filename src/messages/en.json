@@ -6,7 +6,7 @@
       "placeholder": "Search by name, role, or expertise...",
       "clear": "Clear search",
       "results": {
-        "found": "{count, plural, =0 {No connections found} =1 {Found 1 connection} other {Found # connections}}"
+        "found": "{count, plural, =0 {No connections found} one {Found 1 connection} other {Found # connections}}"
       }
     },
     "sort": {
@@ -32,11 +32,18 @@
       "all": "All {category}",
       "list": {
         "automotive": "Automotive",
-        "legal": "Legal",
-        "housing": "Housing",
-        "healthcare": "Healthcare",
+        "beauty": "Beauty",
+        "childcare": "Childcare",
+        "education": "Education",
+        "electronics": "Electronics",
+        "events": "Events",
+        "financial": "Financial",
         "foodAndDining": "Food & Dining",
-        "financial": "Financial"
+        "healthcare": "Healthcare",
+        "housing": "Housing",
+        "legal": "Legal",
+        "moving": "Moving",
+        "telecom": "Telecom"
       },
       "subcategories": {
         "automotive": {
@@ -45,18 +52,47 @@
           "carBuyingConsultation": "Car Buying Consultation",
           "autoBodyRepair": "Auto Body Repair"
         },
-        "legal": {
-          "taxAdvisory": "Tax Advisory",
-          "familyLaw": "Family Law",
-          "realEstateLaw": "Real Estate Law",
-          "businessLaw": "Business Law",
-          "immigrationLaw": "Immigration Law"
+        "beauty": {
+          "hairdressers": "Hairdressers",
+          "nailSalons": "Nail Salons",
+          "makeup": "Makeup",
+          "skinCare": "Skin Care",
+          "massage": "Massage"
         },
-        "housing": {
-          "realEstateAgents": "Real Estate Agents",
-          "propertyManagement": "Property Management",
-          "homeInspection": "Home Inspection",
-          "interiorDesign": "Interior Design"
+        "childcare": {
+          "babysitting": "Babysitting",
+          "partyAnimators": "Party Animators",
+          "tutoring": "Tutoring",
+          "daycare": "Daycare"
+        },
+        "education": {
+          "languageCourses": "Language Courses",
+          "drivingSchools": "Driving Schools",
+          "musicLessons": "Music Lessons",
+          "artClasses": "Art Classes"
+        },
+        "electronics": {
+          "phoneRepair": "Phone Repair",
+          "computerRepair": "Computer Repair",
+          "tvRepair": "TV Repair",
+          "applianceRepair": "Appliance Repair"
+        },
+        "events": {
+          "photographers": "Photographers",
+          "videographers": "Videographers",
+          "eventPlanners": "Event Planners"
+        },
+        "financial": {
+          "taxAdvisory": "Tax Advisory",
+          "financialPlanning": "Financial Planning",
+          "accounting": "Accounting",
+          "investment": "Investment"
+        },
+        "foodAndDining": {
+          "restaurants": "Restaurants",
+          "personalChefs": "Personal Chefs",
+          "bakeries": "Bakeries",
+          "nutrition": "Nutrition"
         },
         "healthcare": {
           "primaryCare": "Primary Care",
@@ -65,17 +101,29 @@
           "physicalTherapy": "Physical Therapy",
           "mentalHealth": "Mental Health"
         },
-        "foodAndDining": {
-          "restaurants": "Restaurants",
-          "personalChefs": "Personal Chefs",
-          "catering": "Catering",
-          "nutrition": "Nutrition"
+        "housing": {
+          "realEstateAgents": "Real Estate Agents",
+          "propertyManagement": "Property Management",
+          "homeInspection": "Home Inspection",
+          "interiorDesign": "Interior Design"
         },
-        "financial": {
-          "taxAdvisory": "Tax Advisory",
-          "financialPlanning": "Financial Planning",
-          "accounting": "Accounting",
-          "investment": "Investment"
+        "legal": {
+          "familyLaw": "Family Law",
+          "realEstateLaw": "Real Estate Law",
+          "businessLaw": "Business Law",
+          "immigrationLaw": "Immigration Law"
+        },
+        "moving": {
+          "localMoving": "Local Moving",
+          "internationalMoving": "International Moving",
+          "storage": "Storage",
+          "packingServices": "Packing Services"
+        },
+        "telecom": {
+          "internetProviders": "Internet Providers",
+          "mobileProviders": "Mobile Providers",
+          "tvProviders": "TV Providers",
+          "networkInstallation": "Network Installation"
         }
       }
     },

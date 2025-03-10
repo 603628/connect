@@ -31,12 +31,19 @@
       "allServices": "Всі послуги",
       "all": "Всі {category}",
       "list": {
-        "automotive": "Автомобільні",
-        "legal": "Юридичні",
-        "housing": "Житлові",
-        "healthcare": "Охорона здоров'я",
+        "automotive": "Автомобільні послуги",
+        "beauty": "Краса та догляд",
+        "childcare": "Догляд за дітьми",
+        "education": "Освіта",
+        "electronics": "Електроніка",
+        "events": "Події та заходи",
+        "financial": "Фінансові послуги",
         "foodAndDining": "Їжа та харчування",
-        "financial": "Фінансові"
+        "healthcare": "Охорона здоров'я",
+        "housing": "Житло",
+        "legal": "Юридичні послуги",
+        "moving": "Перевезення",
+        "telecom": "Телекомунікації"
       },
       "subcategories": {
         "automotive": {
@@ -45,12 +52,55 @@
           "carBuyingConsultation": "Консультації з купівлі авто",
           "autoBodyRepair": "Кузовний ремонт"
         },
-        "legal": {
+        "beauty": {
+          "hairdressers": "Перукарі",
+          "nailSalons": "Манікюр та педикюр",
+          "makeup": "Макіяж",
+          "skinCare": "Догляд за шкірою",
+          "massage": "Масаж"
+        },
+        "childcare": {
+          "babysitting": "Няні",
+          "partyAnimators": "Аніматори",
+          "tutoring": "Репетиторство",
+          "daycare": "Дитячий садок"
+        },
+        "education": {
+          "languageCourses": "Мовні курси",
+          "drivingSchools": "Автошколи",
+          "musicLessons": "Уроки музики",
+          "artClasses": "Уроки малювання"
+        },
+        "electronics": {
+          "phoneRepair": "Ремонт телефонів",
+          "computerRepair": "Ремонт комп'ютерів",
+          "tvRepair": "Ремонт телевізорів",
+          "applianceRepair": "Ремонт побутової техніки"
+        },
+        "events": {
+          "photographers": "Фотографи",
+          "videographers": "Відеографи",
+          "eventPlanners": "Організатори заходів",
+          "catering": "Кейтеринг"
+        },
+        "financial": {
           "taxAdvisory": "Податкові консультації",
-          "familyLaw": "Сімейне право",
-          "realEstateLaw": "Нерухомість",
-          "businessLaw": "Корпоративне право",
-          "immigrationLaw": "Імміграційне право"
+          "financialPlanning": "Фінансове планування",
+          "accounting": "Бухгалтерія",
+          "investment": "Інвестиції"
+        },
+        "foodAndDining": {
+          "restaurants": "Ресторани",
+          "personalChefs": "Персональні кухарі",
+          "bakeries": "Випічка",
+          "nutrition": "Харчування"
+        },
+        "healthcare": {
+          "primaryCare": "Сімейні лікарі",
+          "pediatrics": "Педіатрія",
+          "dentistry": "Стоматологія",
+          "physicalTherapy": "Фізіотерапія",
+          "mentalHealth": "Психічне здоров'я"
         },
         "housing": {
           "realEstateAgents": "Ріелтори",
@@ -58,24 +108,24 @@
           "homeInspection": "Інспекція будинків",
           "interiorDesign": "Дизайн інтер'єру"
         },
-        "healthcare": {
-          "primaryCare": "Первинна допомога",
-          "pediatrics": "Педіатрія",
-          "dentistry": "Стоматологія",
-          "physicalTherapy": "Фізіотерапія",
-          "mentalHealth": "Психічне здоров'я"
-        },
-        "foodAndDining": {
-          "restaurants": "Ресторани",
-          "personalChefs": "Персональні кухарі",
-          "catering": "Кейтеринг",
-          "nutrition": "Харчування"
-        },
-        "financial": {
+        "legal": {
           "taxAdvisory": "Податкові консультації",
-          "financialPlanning": "Фінансове планування",
-          "accounting": "Бухгалтерія",
-          "investment": "Інвестиції"
+          "familyLaw": "Сімейне право",
+          "realEstateLaw": "Право нерухомості",
+          "businessLaw": "Господарське право",
+          "immigrationLaw": "Імміграційне право"
+        },
+        "moving": {
+          "localMoving": "Місцеві перевезення",
+          "internationalMoving": "Міжнародні перевезення",
+          "storage": "Зберігання",
+          "packingServices": "Пакувальні послуги"
+        },
+        "telecom": {
+          "internetProviders": "Інтернет-провайдери",
+          "mobileProviders": "Мобільні оператори",
+          "tvProviders": "Телебачення",
+          "networkInstallation": "Встановлення мереж"
         }
       }
     },

@@ -69,6 +69,14 @@ export default function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [mounted, setMounted] = useState(false);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>(() => {
+    try {
+      const saved = localStorage.getItem('selectedCategories');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
 
   // Add effect to persist selections
   useEffect(() => {
@@ -79,6 +87,15 @@ export default function Home() {
       localStorage.setItem('sortBy', sortBy);
     }
   }, [selectedCategoryId, selectedSubcategoryId, searchQuery, sortBy, mounted]);
+
+  // Save selected categories to localStorage whenever they change
+  useEffect(() => {
+    try {
+      localStorage.setItem('selectedCategories', JSON.stringify(selectedCategories));
+    } catch (error) {
+      console.error('Error saving selected categories:', error);
+    }
+  }, [selectedCategories]);
 
   // Memoized functions and computed values
   const t = useCallback((key: string, params?: Record<string, any>): string => {
@@ -165,6 +182,15 @@ export default function Home() {
     { value: 'connectionStrength' as const, label: t('app.sort.options.connectionStrength') },
   ], [t]);
 
+  // Sort categories alphabetically by their translated names
+  const sortedCategories = useMemo(() => {
+    return CATEGORIES.slice().sort((a, b) => {
+      const aName = t(`app.categories.list.${a.id}`);
+      const bName = t(`app.categories.list.${b.id}`);
+      return aName.localeCompare(bName);
+    });
+  }, [t]);
+
   // Effects
   useEffect(() => {
     setMounted(true);
@@ -236,7 +262,7 @@ export default function Home() {
             >
               {t('app.categories.allServices')}
             </button>
-            {CATEGORIES.map((category) => (
+            {sortedCategories.map((category) => (
               <div key={category.id} className="space-y-1">
                 <button
                   onClick={() => {
