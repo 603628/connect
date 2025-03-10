@@ -10,27 +10,23 @@ export const CATEGORIES: CategoryStructure[] = [
   },
   {
     name: 'Legal',
-    subcategories: ['Family Law', 'Real Estate Law', 'Business Law', 'Immigration Law']
+    subcategories: ['Tax Advisory', 'Family Law', 'Real Estate Law', 'Business Law', 'Immigration Law']
   },
   {
     name: 'Housing',
     subcategories: ['Real Estate Agents', 'Property Management', 'Home Inspection', 'Interior Design']
   },
   {
-    name: 'Financial',
-    subcategories: ['Tax Advisory', 'Financial Planning', 'Accounting', 'Investment']
-  },
-  {
     name: 'Healthcare',
-    subcategories: ['Primary Care', 'Dentistry', 'Physical Therapy', 'Mental Health']
-  },
-  {
-    name: 'Childcare',
-    subcategories: ['Daycare', 'Nanny Services', 'Tutoring', 'Pediatrics']
+    subcategories: ['Primary Care', 'Pediatrics', 'Dentistry', 'Physical Therapy', 'Mental Health']
   },
   {
     name: 'Food & Dining',
-    subcategories: ['Restaurants', 'Catering', 'Personal Chefs', 'Nutrition']
+    subcategories: ['Restaurants', 'Personal Chefs', 'Catering', 'Nutrition']
+  },
+  {
+    name: 'Financial',
+    subcategories: ['Tax Advisory', 'Financial Planning', 'Accounting', 'Investment']
   }
 ];
 
